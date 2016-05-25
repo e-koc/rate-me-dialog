@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">RateMeDialog</string>
+  <string name="rate_me_button_positive">Positive</string>
+  <string name="rate_me_button_negative">Negative</string>
+  <string name="rate_me_button_never_show_again">Never Show</string>
+  <string name="rate_me_dialog_title">Dialog Title</string>
+  <string name="rate_me_dialog_message">Dialog Message</string>
+</resources>

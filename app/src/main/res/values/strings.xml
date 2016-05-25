@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">RateMeDialogSample</string>
+  <string name="rate_me_button_positive">Rate</string>
+  <string name="rate_me_button_negative">Later</string>
+  <string name="rate_me_button_never_show_again">Never Show</string>
+  <string name="rate_me_dialog_title"></string>
+  <string name="rate_me_dialog_message">Would you like to rate us on Google Play?</string>
+</resources>
