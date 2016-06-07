@@ -2,6 +2,10 @@
 
 ![Sample](https://github.com/e-koc/rate-me-dialog/blob/develop/app/src/main/res/drawable/rate_sample.png)
 
+**Gradle**  
+
+
+`compile 'net.emrekoc.android:ratemedialog:1.0'`
 
 #Usage
 
@@ -33,3 +37,7 @@ If you want to show dialog immediately, use **`RateMe.showImmediately(this);`**
 `<string name="rate_me_dialog_title"></string>`
 
 `<string name="rate_me_dialog_message">Would you like to rate us on Google Play?</string>`
+
+
+
+
