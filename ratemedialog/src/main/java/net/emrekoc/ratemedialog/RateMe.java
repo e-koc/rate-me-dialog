@@ -42,10 +42,10 @@ public class RateMe {
     return context.getSharedPreferences(NAME, Context.MODE_PRIVATE);
   }
 
-  public static void checkForShow(Context context, final AlertDialog.OnClickListener listener) {
+  public static boolean checkForShow(Context context, final AlertDialog.OnClickListener listener) {
     SharedPreferences sharedPreferences = getSharedPreferences(context);
     if (sharedPreferences.getBoolean(NEVER_SHOW, false)) {
-      return;
+      return false;
     }
     int perHour = sharedPreferences.getInt(PER_HOUR, 1);
     long lastShown = sharedPreferences.getLong(LAST_SHOWN, -1);
@@ -53,7 +53,9 @@ public class RateMe {
     if (currentTimeMilis - lastShown >= TimeUnit.HOURS.toMillis(perHour)) {
       sharedPreferences.edit().putLong(LAST_SHOWN, currentTimeMilis).commit();
       showImmediately(context, listener);
+      return true;
     }
+    return false;
   }
 
   public static void showImmediately(final Context context,
@@ -98,8 +100,8 @@ public class RateMe {
     adb.create().show();
   }
 
-  public static void checkForShow(Context context) {
-    checkForShow(context, null);
+  public static boolean checkForShow(Context context) {
+    return checkForShow(context, null);
   }
 
   public static void showImmediately(Context context) {
